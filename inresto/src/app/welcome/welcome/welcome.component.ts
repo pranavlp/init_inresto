@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss']
+  styleUrls: ['./welcome.component.sass']
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor(public data: DataService) { }
+  constructor() { }
 
   ngOnInit() {
   }
-  toggleHeader(){
-    this.data.toggleHeader()
-  }
+
 }
