@@ -6,9 +6,20 @@ import { HeaderrightComponent } from './headerright/headerright.component';
 import { HeaderoptionsComponent } from './headeroptions/headeroptions.component';
 
 @NgModule({
-  declarations: [HeadermainComponent, HeaderleftComponent, HeaderrightComponent, HeaderoptionsComponent],
+  declarations: [
+    HeadermainComponent,
+    HeaderleftComponent,
+    HeaderrightComponent,
+    HeaderoptionsComponent
+  ],
   imports: [
     CommonModule
+  ],
+  exports : [
+    HeadermainComponent,
+    HeaderleftComponent,
+    HeaderrightComponent,
+    HeaderoptionsComponent
   ]
 })
 export class HeaderModule { }

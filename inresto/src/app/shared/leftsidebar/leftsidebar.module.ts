@@ -6,6 +6,9 @@ import { LeftsidebarComponent } from './leftsidebar/leftsidebar.component';
   declarations: [LeftsidebarComponent],
   imports: [
     CommonModule
+  ],
+  exports : [
+    LeftsidebarComponent
   ]
 })
 export class LeftsidebarModule { }

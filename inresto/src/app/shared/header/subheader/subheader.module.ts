@@ -4,9 +4,16 @@ import { SubheadlerleftComponent } from './subheadlerleft/subheadlerleft.compone
 import { SubheadlerrightComponent } from './subheadlerright/subheadlerright.component';
 
 @NgModule({
-  declarations: [SubheadlerleftComponent, SubheadlerrightComponent],
+  declarations: [
+    SubheadlerleftComponent,
+    SubheadlerrightComponent
+  ],
   imports: [
     CommonModule
+  ],
+  exports : [
+    SubheadlerleftComponent,
+    SubheadlerrightComponent
   ]
 })
 export class SubheaderModule { }

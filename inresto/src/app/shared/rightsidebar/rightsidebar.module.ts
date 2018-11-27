@@ -6,6 +6,9 @@ import { RightsidebarComponent } from './rightsidebar/rightsidebar.component';
   declarations: [RightsidebarComponent],
   imports: [
     CommonModule
+  ],
+  exports : [
+    RightsidebarComponent
   ]
 })
 export class RightsidebarModule { }
