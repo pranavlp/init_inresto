@@ -25,6 +25,7 @@ import { AppComponent } from './app.component';
     SharedModule,
     CommonviewsModule,
     WelcomeModule,
+    NgbModule.forRoot()
   ],
   providers: [
     DataService,
