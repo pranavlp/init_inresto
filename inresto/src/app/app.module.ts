@@ -2,10 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
-
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
 import { DataService } from './data.service';
 import { LoggerService } from './logger.service';
 import { SharedModule } from './shared/shared.module';
@@ -21,11 +17,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    NgbModule,
     SharedModule,
     CommonviewsModule,
     WelcomeModule,
-    NgbModule.forRoot()
   ],
   providers: [
     DataService,
