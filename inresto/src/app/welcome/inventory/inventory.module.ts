@@ -6,6 +6,9 @@ import { InventoryComponent } from './inventory/inventory.component';
   declarations: [InventoryComponent],
   imports: [
     CommonModule
+  ],
+  exports:[
+    InventoryComponent,
   ]
 })
 export class InventoryModule { }
