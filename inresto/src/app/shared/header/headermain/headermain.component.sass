@@ -1,3 +1,5 @@
+$assetPath : "/assets/images";
+
 .headerBg
     background: #f76858
 
@@ -6,3 +8,22 @@
 
 .helpIcon, .notifiIcon
     padding: 11px; display: block;
+
+.dropdown-menu
+    left: auto; right: 0;
+
+.headTop
+    font-size: 14px; padding-top: 2px; 
+
+.dropdown-menu .dropdown-item
+    font-size: 12px;
+
+.profileIcon
+    padding-right: 35px !important; color: rgba(255,255,255,1) !important;
+.profileIcon:before
+    width: 28px; height: 28px; position: absolute; top: 6px; right: 0; content: ""; background: url(#{$assetPath}/profile.png) no-repeat;
+
+.profileIcon:after
+    display: none;
+
+
