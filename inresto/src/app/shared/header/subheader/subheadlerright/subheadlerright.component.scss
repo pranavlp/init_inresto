@@ -1,17 +1,19 @@
-$assetPath : "/assets/images";
+// $assetPath : "/assets/images";
+// .locIcn:before
+//     background: url(#{$assetPath}/location.png) no-repeat; top: 7px; left: 10px;
 
 .cddMain
-    width: auto; text-align: center; position: relative; border:#d9d8d8 1px solid; border-radius: 5px; height:35px; padding: 7px 30px; margin: 0 7px; font-size: 12px; color: #5b5b5b; float:left;
+    {width: auto; text-align: center; position: relative; border:#d9d8d8 1px solid; border-radius: 5px; height:35px; padding: 7px 30px; margin: 0 7px; font-size: 12px; color: #5b5b5b; float:left;}
 
 .cddMain:before, .cddMain:after
-    position: absolute; content: ""; width: 18px; height: 18px;
+    {position: absolute; content: ""; width: 18px; height: 18px;}
 
 .locIcn:before
-    background: url(#{$assetPath}/location.png) no-repeat; top: 7px; left: 10px;
+    {background: url(/assets/images/location.png) no-repeat; top: 7px; left: 10px;}
     
 
 .calIcn:before
-    background: url(#{$assetPath}/cal.png) no-repeat; top: 6px; left: 8px;
+    {background: url(/assets/images/cal.png) no-repeat; top: 6px; left: 8px;}
 
 .dwnIcn:before
-    background: url(#{$assetPath}/download.png) no-repeat; top: 8px; left: 10px;
+    {background: url(/assets/images/download.png) no-repeat; top: 8px; left: 10px;}

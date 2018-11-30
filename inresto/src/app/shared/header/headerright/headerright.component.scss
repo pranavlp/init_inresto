@@ -1,19 +1,19 @@
-$assetPath : "/assets/images";
+// $assetPath : "/assets/images";
 
 .dropdown-menu
-    left: auto; right: 0;
+    {left: auto; right: 0;}
 
 .headTop
-    font-size: 14px; padding-top: 2px; 
+    {font-size: 14px; padding-top: 2px; }
 
 .dropdown-menu .dropdown-item
-    font-size: 12px;
+    {font-size: 12px;}
 
 .profileIcon
-    padding-right: 35px !important; color: rgba(255,255,255,1) !important;
+    {padding-right: 35px !important; color: rgba(255,255,255,1) !important;}
 .profileIcon:before
-    width: 28px; height: 28px; position: absolute; top: 6px; right: 0; content: ""; background: url(#{$assetPath}/profile.png) no-repeat;
+    {width: 28px; height: 28px; position: absolute; top: 6px; right: 0; content: ""; background: url(/assets/images/profile.png) no-repeat;}
 
 .profileIcon:after
-    display: none;
+    {display: none;}
 

@@ -6,7 +6,7 @@ import { DataService } from './data.service';
 import { LoggerService } from './logger.service';
 import { SharedModule } from './shared/shared.module';
 import { CommonviewsModule } from './commonviews/commonviews.module';
-import { WelcomeModule } from './welcome/welcome.module'
+import { WelcomeModule } from './welcome/welcome.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
