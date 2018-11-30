@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 import { SubheadlerleftComponent } from './subheadlerleft/subheadlerleft.component';
 import { SubheadlerrightComponent } from './subheadlerright/subheadlerright.component';
 
+
 @NgModule({
   declarations: [
     SubheadlerleftComponent,
-    SubheadlerrightComponent
+    SubheadlerrightComponent,
+    SubheadlerrightComponent,
+
   ],
   imports: [
     CommonModule

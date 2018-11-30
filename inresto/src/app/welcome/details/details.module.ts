@@ -6,6 +6,8 @@ import { DetailsComponent } from './details.component';
   declarations: [DetailsComponent],
   imports: [
     CommonModule
+  ],exports:[
+    DetailsComponent,
   ]
 })
 export class DetailsModule { }
