@@ -27,7 +27,6 @@ export class WelcomeComponent implements OnChanges, OnInit, DoCheck, AfterConten
   }
   ngOnDestroy() {
   }
-
   onButtonClick(){
     alert("button clicked");
   }
