@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
 export class DataService {
 
   static dataService: DataService;
-  menuIndex = -1;
+  menuIndex = 0;
   constructor(public http: Http, public logger: LoggerService) {
     DataService.dataService = this;
    }

@@ -1,0 +1,21 @@
+.navstyling{
+    background: #fff;
+    margin-bottom: 20px;
+}
+.nav-tabs .nav-link.active{
+    border-color: #fff #fff #f76858;
+    font-weight: 600;
+}
+.nav-tabs .nav-link{
+    font-size: 14px;
+    color: #000;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.TabBg{
+    background: #fff;
+}
+.TabBg>.active{
+    padding: 10px;
+    width: 100%;
+}
