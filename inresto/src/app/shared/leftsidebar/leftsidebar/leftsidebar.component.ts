@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-leftsidebar',
   templateUrl: './leftsidebar.component.html',
-  styleUrls: ['./leftsidebar.component.sass']
+  styleUrls: ['./leftsidebar.component.scss']
 })
 export class LeftsidebarComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 

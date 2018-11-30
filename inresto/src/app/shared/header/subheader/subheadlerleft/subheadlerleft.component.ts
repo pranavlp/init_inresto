@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-subheadlerleft',
   templateUrl: './subheadlerleft.component.html',
-  styleUrls: ['./subheadlerleft.component.sass']
+  styleUrls: ['./subheadlerleft.component.scss']
 })
 export class SubheadlerleftComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 

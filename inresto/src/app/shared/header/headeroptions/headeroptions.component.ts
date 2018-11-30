@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-headeroptions',
   templateUrl: './headeroptions.component.html',
-  styleUrls: ['./headeroptions.component.sass']
+  styleUrls: ['./headeroptions.component.scss']
 })
 export class HeaderoptionsComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 

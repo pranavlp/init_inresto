@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-rightsidebar',
   templateUrl: './rightsidebar.component.html',
-  styleUrls: ['./rightsidebar.component.sass']
+  styleUrls: ['./rightsidebar.component.scss']
 })
 export class RightsidebarComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 

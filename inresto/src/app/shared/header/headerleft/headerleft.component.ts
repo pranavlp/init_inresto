@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-headerleft',
   templateUrl: './headerleft.component.html',
-  styleUrls: ['./headerleft.component.sass']
+  styleUrls: ['./headerleft.component.scss']
 })
 export class HeaderleftComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 

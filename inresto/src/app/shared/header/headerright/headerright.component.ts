@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-headerright',
   templateUrl: './headerright.component.html',
-  styleUrls: ['./headerright.component.sass']
+  styleUrls: ['./headerright.component.scss']
 })
 export class HeaderrightComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 

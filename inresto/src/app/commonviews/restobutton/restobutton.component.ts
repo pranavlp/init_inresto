@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-restobutton',
   templateUrl: './restobutton.component.html',
-  styleUrls: ['./restobutton.component.sass']
+  styleUrls: ['./restobutton.component.scss']
 })
 export class RestobuttonComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   @Input()

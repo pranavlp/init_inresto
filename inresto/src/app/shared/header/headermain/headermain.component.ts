@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-headermain',
   templateUrl: './headermain.component.html',
-  styleUrls: ['./headermain.component.sass']
+  styleUrls: ['./headermain.component.scss']
 })
 export class HeadermainComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
