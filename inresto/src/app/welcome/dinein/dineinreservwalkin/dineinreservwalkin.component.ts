@@ -5,14 +5,13 @@ import { DataService } from '../../../data.service';
 import { LoggerService } from '../../../logger.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-dineinreservwalkin',
+  templateUrl: './dineinreservwalkin.component.html',
+  styleUrls: ['./dineinreservwalkin.component.scss']
 })
-export class DashboardComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class DineinreservwalkinComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
-  constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) {
-  }
+  constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) { }
 
   ngOnInit() {
   }
