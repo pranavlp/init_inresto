@@ -10,17 +10,26 @@ import { Location } from '@angular/common';
 export class DataService {
 
   static dataService: DataService;
-  menuIndex = 0;
+  menuIndex = 1;
+  submenuIndex = 101;
   constructor(public http: Http, public logger: LoggerService) {
     DataService.dataService = this;
    }
    static getDataService(){
      return DataService.dataService;
    }
-   public setMenuSelectedAt(index){
+   public setLeftMenuIndex(index){
      this.menuIndex = index;
    }
-   public getMenuIndex(){
+   public getLeftMenuIndex(){
      return this.menuIndex;
    }
+
+   public setLeftSubMenuIndex(index){
+    this.submenuIndex = index;
+  }
+  public getLeftSubMenuIndex(){
+    return this.submenuIndex;
+  }
+   
 }
