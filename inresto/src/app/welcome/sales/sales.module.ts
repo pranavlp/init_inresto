@@ -6,6 +6,9 @@ import { SalesComponent } from './sales/sales.component';
   declarations: [SalesComponent],
   imports: [
     CommonModule
+  ], 
+  exports:[
+    SalesComponent,
   ]
 })
 export class SalesModule { }
