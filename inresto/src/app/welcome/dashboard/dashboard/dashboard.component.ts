@@ -1,6 +1,8 @@
 import { Component, OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 import { RouterModule, Routes, Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
+import { DataService } from '../../../data.service'
+import { LoggerService } from '../../../logger.service'
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +11,8 @@ import { Location } from '@angular/common';
 })
 export class DashboardComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
-  constructor() { }
+  constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) {
+  }
 
   ngOnInit() {
   }

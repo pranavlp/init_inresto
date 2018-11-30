@@ -1,6 +1,8 @@
 import { Component, OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 import { RouterModule, Routes, Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
+import { DataService } from '../../../data.service'
+import { LoggerService } from '../../../logger.service'
 
 @Component({
   selector: 'app-leftsidebar',
@@ -9,7 +11,8 @@ import { Location } from '@angular/common';
 })
 export class LeftsidebarComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
-  constructor() { }
+  constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) {
+  }
 
   ngOnInit() {
   }
@@ -31,4 +34,7 @@ export class LeftsidebarComponent implements OnInit, OnInit, DoCheck, AfterConte
     alert("button clicked");
   }
 
+  setMenuIndex(index){
+    this.data.setMenuSelectedAt(index)
+  }
 }

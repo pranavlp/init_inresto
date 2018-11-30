@@ -7,16 +7,14 @@ import { SharedModule } from '../shared/shared.module';
 import { CommonviewsModule } from '../commonviews/commonviews.module';
 
 import { WelcomeComponent } from './welcome/welcome.component';
-import {DashboardModule} from './dashboard/dashboard.module'
 import {DetailsModule} from './details/details.module'
-import { from } from 'rxjs';
+
 @NgModule({
   declarations: [WelcomeComponent],
   imports: [
     CommonModule,
     SharedModule,
     CommonviewsModule,
-    DashboardModule,
     DetailsModule,
   ],exports:[
     WelcomeComponent,

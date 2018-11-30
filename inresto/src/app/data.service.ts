@@ -9,6 +9,18 @@ import { Location } from '@angular/common';
 })
 export class DataService {
 
+  static dataService: DataService;
+  menuIndex = -1;
   constructor(public http: Http, public logger: LoggerService) {
+    DataService.dataService = this;
+   }
+   static getDataService(){
+     return DataService.dataService;
+   }
+   public setMenuSelectedAt(index){
+     this.menuIndex = index;
+   }
+   public getMenuIndex(){
+     return this.menuIndex;
    }
 }

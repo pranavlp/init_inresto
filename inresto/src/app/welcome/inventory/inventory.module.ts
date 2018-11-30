@@ -11,4 +11,4 @@ import { InventoryComponent } from './inventory/inventory.component';
     InventoryComponent,
   ]
 })
-export class InventoryModule { }
+export class InventoryModule {}
