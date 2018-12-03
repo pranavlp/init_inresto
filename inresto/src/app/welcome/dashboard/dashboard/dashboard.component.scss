@@ -15,6 +15,7 @@
 .TabBg{
     background: #fff;
     width: 950px;
+    font-size: 12px;
 }
 .TabBg>.active{
     padding: 10px;
@@ -45,3 +46,25 @@
     width: 20px;
     height: 20px;
 }
+.bookingDetails{
+    background: #f2f2f2;
+    padding: 6px 0px;
+    margin: 10px 0px;
+    font-size: 14px;
+}
+.bookingDetails span{
+    padding: 0px 10px;
+}
+.usernameContainer{
+    width: 200px;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    padding: 0px;
+    font-size: 12px;
+    box-shadow: 2px 1px 20px #F2F2F2;
+}
+.usernameContainer span{
+    padding: 6px;
+    display: table-cell;
+    vertical-align: middle;
+}   

@@ -23,7 +23,7 @@
       </div>
       <div class="col-md-9 d-flex justify-content-end btnContainer">
         <button class="checkAvailability">Check Availability</button>
-        <button class="adresrv"><span class="plus_icon">+</span>Add Reservation</button>
+        <button class="adresrv">Add Reservation</button>
         <button class="add_walkin">Add Walkin</button>
         <div class="btn-group" dropdown>
             <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
@@ -40,6 +40,57 @@
               </li>
             </ul>
           </div>
+      </div>
+      <div class="col-md-12 d-flex bookingDetails">
+        <div class="col-md-4 d-flex">14-11-2018</div>
+        <div class="col-md-8 d-flex justify-content-end">
+          <span>Bookings - 5</span>
+          <span>Diners - 12</span>
+        </div>
+      </div>
+      <div class="col-md-12 d-flex">
+      <table style="width:100%; font-size: 12px;">
+          <tr *ngFor="let user of respData">
+              <td><img src="assets/images/dinein_table.png"/></td>
+              <td>
+                  <div class="usernameContainer">
+                    <span>
+                        <img src="assets/images/userdetails.png"/>
+                    </span>
+                    <span>
+                      <strong>{{ user.name}}</strong><br>
+                      9093832344
+                    </span>
+                  </div>
+              </td> 
+              <td>
+                  AB's - Jubilee Hills<br>
+                  14-11-2018<br>
+  
+              </td>
+              <td>
+                Pay For <br>
+                Dineout
+              </td> 
+              <td>
+                Requested<br>
+                14-11-2018<br>
+                12:30PM
+              </td>
+              <td>
+                  <b>Booked</b><br>
+                  14-11-2018<br>
+                  12:30PM
+              </td> 
+              <td>17 Visits</td>
+              <td><img src="assets/images/done.png"/></td>
+              <td><img src="assets/images/loading.png"/></td>
+              <td><img src="assets/images/delete.png"/></td>
+              <td><img src="assets/images/note.png"/></td>
+              <td><img src="assets/images/edit.png"/></td>
+          </tr>
+         
+        </table>
       </div>
     </div>
   </div>
