@@ -34,7 +34,8 @@ export class LeftsidebarComponent implements OnInit, OnInit, DoCheck, AfterConte
     alert("button clicked");
   }
 
-  setMenuIndex(index){
-    this.data.setMenuSelectedAt(index)
+  setMenuIndex(index,subIndex){
+    this.data.setLeftMenuIndex(index)
+    this.data.setLeftSubMenuIndex(subIndex);
   }
 }

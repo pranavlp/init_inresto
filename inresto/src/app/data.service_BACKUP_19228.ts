@@ -11,11 +11,14 @@ import { Observable } from 'rxjs';
 export class DataService {
 
   static dataService: DataService;
-
+<<<<<<< HEAD
+  menuIndex = 0;
+  constructor(public http: HttpClient, public logger: LoggerService) {
+=======
   menuIndex = 1;
   submenuIndex = 101;
-  constructor(public http: HttpClient, public logger: LoggerService) {
-
+  constructor(public http: Http, public logger: LoggerService) {
+>>>>>>> 3774aa4a330629dfe65553bfef2f194e133e1fdb
     DataService.dataService = this;
    }
    static getDataService(){
@@ -28,12 +31,13 @@ export class DataService {
      return this.menuIndex;
    }
 
+<<<<<<< HEAD
    public getResponseForUrl(getUrl) : Observable <HttpResponse<any>>{
      return this.http.get<any>(
        getUrl, {observe : 'response'}
      )
    }
-
+=======
    public setLeftSubMenuIndex(index){
     this.submenuIndex = index;
   }
@@ -41,4 +45,5 @@ export class DataService {
     return this.submenuIndex;
   }
    
+>>>>>>> 3774aa4a330629dfe65553bfef2f194e133e1fdb
 }

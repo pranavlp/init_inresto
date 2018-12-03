@@ -1,6 +1,7 @@
 
-<app-dashboard *ngIf="this.data.getMenuIndex() == 0"></app-dashboard>
-<app-inventory *ngIf="this.data.getMenuIndex() == 2"></app-inventory>
-<app-sales *ngIf="this.data.getMenuIndex() == 1"></app-sales>
+<app-dashboard *ngIf="this.data.getLeftMenuIndex() == 1 && this.data.getLeftSubMenuIndex() == 101 "></app-dashboard>
+<app-dashboard *ngIf="this.data.getLeftMenuIndex() == 1 && this.data.getLeftSubMenuIndex() == 102 "></app-dashboard>
+<app-sales *ngIf="this.data.getLeftMenuIndex() == 2"></app-sales>
+<app-inventory *ngIf="this.data.getLeftMenuIndex() == 3"></app-inventory>
 
 

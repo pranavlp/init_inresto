@@ -11,20 +11,17 @@ import { Observable } from 'rxjs';
 export class DataService {
 
   static dataService: DataService;
-
-  menuIndex = 1;
-  submenuIndex = 101;
+  menuIndex = 0;
   constructor(public http: HttpClient, public logger: LoggerService) {
-
     DataService.dataService = this;
    }
    static getDataService(){
      return DataService.dataService;
    }
-   public setLeftMenuIndex(index){
+   public setMenuSelectedAt(index){
      this.menuIndex = index;
    }
-   public getLeftMenuIndex(){
+   public getMenuIndex(){
      return this.menuIndex;
    }
 
@@ -33,12 +30,4 @@ export class DataService {
        getUrl, {observe : 'response'}
      )
    }
-
-   public setLeftSubMenuIndex(index){
-    this.submenuIndex = index;
-  }
-  public getLeftSubMenuIndex(){
-    return this.submenuIndex;
-  }
-   
 }
