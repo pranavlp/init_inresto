@@ -1,0 +1,85 @@
+<div class="row">
+    <form class="col-md-12">
+        
+      <div class="row input_div company_group_name">
+        <label class= "col-md-2 float-left form_label">Company Group Name</label>
+        <input type="text" class="col-md-7 float-left form-control form_text_box" placeholder= "Company Group Name">
+      </div>
+
+      <div class="row input_div company_name">
+        <label class= "col-md-2 float-left form_label">Company Name</label>
+        <input type="text" class="col-md-7 float-left form-control form_text_box" placeholder= "Company Name">
+      </div>
+
+      <div class= "row">
+        <div class="col-md-10 outlet_text">1st Outlet Details</div>
+      </div>
+
+      <div class="row input_div">
+        <label class= "col-md-2 float-left form_label">Outlet Name</label>
+        <input type="text" class="col-md-7 float-left form-control form_text_box" placeholder= "Outlet Name">
+      </div>
+
+      <div class="row input_div">
+        <label class= "col-md-2 float-left form_label">Company</label>
+        <select class= "col-md-7 form-control form_text_box float-left">
+          <option>Select Company</option>
+        </select>
+      </div>
+
+      <!-- <div class="row input_div">
+        <label class= "col-md-2 float-left form_label">Brand</label>
+        <input type="text" class="col-md-7 float-left form-control form_text_box" placeholder= "Add Brand (Optional)">
+      </div> -->
+
+      <div class="row input_div">
+        <label class= "col-md-2 float-left form_label" for="typeahead-focus">Brand</label>
+        <!-- <input type="text" class="col-md-7 float-left form-control form_text_box" placeholder= "Add Brand (Optional)"> -->
+        <input id="typeahead-focus"
+        type="text"
+        class="col-md-7 float-left form-control form_text_box"
+        [(ngModel)]="model"
+        [ngbTypeahead]="search"
+        (focus)="focus$.next($event.target.value)"
+        (click)="click$.next($event.target.value)"
+        #instance="ngbTypeahead"
+        name= "multiple_outlet" 
+        placeholder= "Add Brand (Optional)"/>
+      </div>
+
+      <div class="row input_div">
+        <label class= "col-md-2 float-left form_label">Email</label>
+        <input type="email" class="col-md-7 float-left form-control form_text_box" placeholder= "Email">
+      </div>
+
+      <div class="row input_div">
+        <label class= "col-md-2 float-left form_label">Password</label>
+        <input type="password" class="col-md-7 float-left form-control form_text_box" placeholder= "Password">
+      </div>
+
+      <div class= "row input_div address_div">
+          <label class= "col-md-2 float-left form_label">Address</label>
+
+          <div class="col-md-7 address" >
+            <input type="text" class= "col-md-12 form-control form_text_box address_text_box" placeholder= "Street Address">
+
+            <input type="text" class= "form-control form_text_box address_text_box sub_address_text_box" placeholder= "Area">
+            <input type="text" class= "form-control form_text_box address_text_box sub_address_text_box_right" placeholder= "Zone">
+
+            <select class= "form-control form_text_box address_text_box sub_address_text_box">
+              <option>Select City</option>
+            </select>
+
+            <input type="text" class= "form-control form_text_box address_text_box sub_address_text_box_right" placeholder= "Zip/Pincode">
+
+            <select class= "form-control form_text_box float-left address_text_box country_text_box">
+              <option>Select Country</option>
+            </select>
+
+            <button type="button" class="btn submit_button"> Submit </button>
+
+          </div>
+      </div>
+
+    </form>
+</div>

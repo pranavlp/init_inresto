@@ -1,0 +1,47 @@
+
+<div class="container company_profile">
+  <div class="row">
+    <div class="col-md-12 profile_head_text heading-20">
+      Set up your Company profile and start using InResto. 
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 profile_select_section">
+      <div class= "col-md-12 profile_select_text">I have</div>
+
+      <div class="col-md-12">
+
+
+        <div class="custom-control custom-radio">
+          <input type="radio" value= "A Single Outlet" (click)="setradio('single_outlet')" class="custom-control-input" id="single_outlet" name="select_profile" [checked]='true' ng-Model="selectedLink">
+          <label class="custom-control-label profile_radio_label" for="single_outlet">A Single Outlet</label>
+        </div> 
+
+        <div class="custom-control custom-radio">
+          <input type="radio" value= "Multiple Outlets under a Single Company" (click)="setradio('multiple_outlet')" class="custom-control-input" id="multi_outlet" name="select_profile" ng-Model="selectedLink">
+          <label class="custom-control-label profile_radio_label" for="multi_outlet">Multiple Outlets under a Single Company</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+          <input type="radio" value= "Multiple Outlets under a Multiple Companies" (click)="setradio('multiple_companies')" class="custom-control-input" id="multi_companies" name="select_profile" ng-Model="selectedLink">
+          <label class="custom-control-label profile_radio_label" for="multi_companies">Multiple Outlets under a Multiple Companies</label>
+        </div>
+        
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container profile_form" *ngIf="isSelected('single_outlet')">
+  <app-single-outlet></app-single-outlet>
+</div>
+<div class="container profile_form" *ngIf="isSelected('multiple_outlet')">
+  <app-multiple-outlet></app-multiple-outlet>
+</div>
+<div class="container profile_form" *ngIf="isSelected('multiple_companies')">
+    <app-multiple-companies></app-multiple-companies>
+</div>
+
