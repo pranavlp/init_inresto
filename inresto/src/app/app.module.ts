@@ -8,7 +8,10 @@ import { SharedModule } from './shared/shared.module';
 import { CommonviewsModule } from './commonviews/commonviews.module';
 import { WelcomeModule } from './welcome/welcome.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     SharedModule,
     CommonviewsModule,
     WelcomeModule,
+    BrowserAnimationsModule,
     NgbModule,
   ],
   providers: [

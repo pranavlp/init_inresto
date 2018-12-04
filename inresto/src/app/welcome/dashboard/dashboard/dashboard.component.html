@@ -23,7 +23,7 @@
       </div>
       <div class="col-md-9 d-flex justify-content-end btnContainer">
         <button class="checkAvailability">Check Availability</button>
-        <button class="adresrv">Add Reservation</button>
+        <button class="adresrv" (click)="Addreservation()">Add Reservation</button>
         <button class="add_walkin">Add Walkin</button>
         <div class="btn-group" dropdown>
             <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
@@ -59,7 +59,7 @@
                     </span>
                     <span>
                       <strong>{{ user.name}}</strong><br>
-                      9093832344
+                      {{ user.phone }}
                     </span>
                   </div>
               </td> 
