@@ -2,6 +2,10 @@ import { Component, OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentCh
 import { RouterModule, Routes, Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
 import { trigger, style,transition,animate,keyframes,query,stagger, animation } from '@angular/animations';
+import {DataService} from '../../data.service';
+import {LoggerService} from '../../logger.service';
+import { from } from 'rxjs';
+
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -25,7 +29,8 @@ import { trigger, style,transition,animate,keyframes,query,stagger, animation } 
 })
 export class WelcomeComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
-  constructor() { }
+  constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) {
+   }
 
   ngOnInit() {
   }
