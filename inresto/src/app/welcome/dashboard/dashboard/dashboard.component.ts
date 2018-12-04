@@ -3,6 +3,7 @@ import { RouterModule, Routes, Router, NavigationStart, NavigationEnd } from '@a
 import { Location } from '@angular/common';
 import { DataService } from '../../../data.service';
 import { LoggerService } from '../../../logger.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,14 +12,22 @@ import { LoggerService } from '../../../logger.service';
 })
 export class DashboardComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
+  respData : [];
+
   constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) {
   }
 
   ngOnInit() {
+    this.data.getResponseForUrl('https://jsonplaceholder.typicode.com/users').subscribe(resp => {
+      this.respData = resp.body;
+    }
+      
+    )
   }
   ngOnChanges() {
   }
   ngDoCheck() {
+   
   }
   ngAfterContentInit() {
   }
