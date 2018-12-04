@@ -1,6 +1,9 @@
 import { Component, OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 import { RouterModule, Routes, Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
+import {DataService} from '../../data.service';
+import {LoggerService} from '../../logger.service';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-welcome',
@@ -9,7 +12,8 @@ import { Location } from '@angular/common';
 })
 export class WelcomeComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
-  constructor() { }
+  constructor(public logger: LoggerService, private router: Router, public data: DataService, private location: Location) {
+   }
 
   ngOnInit() {
   }
