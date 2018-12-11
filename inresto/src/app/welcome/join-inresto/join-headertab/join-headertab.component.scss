@@ -1,0 +1,29 @@
+.join_headertab {
+    background: white;
+    box-shadow: 0 2px 4px #e0e0e0;
+}
+
+.join_header_item {
+    padding: 10px 5px 5px 5px;
+    // border: 2px solid red;
+}
+
+.active_tab {
+    color: #525252;
+    font-size: 12px;
+    font-weight: 500;
+    border-bottom: 3px solid #ff5f5f;
+}
+
+.search_tab {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #d8d8d8;
+    // border: 1px solid red;
+}
+.search_tab span {
+    padding-right: 10px;
+}
+.search_tab img {
+    width: 12px;
+}

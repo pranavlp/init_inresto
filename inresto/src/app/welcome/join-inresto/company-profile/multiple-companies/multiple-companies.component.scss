@@ -1,0 +1,79 @@
+.form_label {
+    color: #525252;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.form_text_box {
+    height: 35px;
+    border: 1px solid #d8d8d8;
+    color: #4a4a4a;
+    font-size: 12px;
+    margin-left: 20px;
+    outline: none;
+    box-shadow: none;
+}
+
+.company_group_name {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.company_name {
+    padding-bottom: 40px;
+    padding-top: 20px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.outlet_text {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #525252;
+}
+
+::-webkit-input-placeholder {
+    color: #d8d8d8;
+}
+
+.input_div {
+    margin-top: 20px;
+}
+
+.address_div {
+    margin-top: 40px;
+}
+
+.address {
+    padding: 0;
+    margin-left: 20px;
+}
+
+.address_text_box {
+    width: 100%;
+    margin-left: 0;
+}
+.sub_address_text_box, .sub_address_text_box_right {
+    float: left;
+    width: 47.5%;
+    margin-top: 20px;
+}
+.sub_address_text_box_right {
+    margin-left: 5%;
+}
+.country_text_box {
+    margin-top: 20px;
+}
+
+.submit_button {
+    margin-top: 30px;
+    width: 150px;
+    font-size: 16px;
+    color: white;
+    background: #f26657;
+}

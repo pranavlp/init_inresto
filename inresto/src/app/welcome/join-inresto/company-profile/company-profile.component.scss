@@ -1,0 +1,46 @@
+.company_profile,  .profile_form{
+    margin-top: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px #e0e0e0;
+}
+.profile_form {
+    padding-bottom: 50px;
+}
+
+.profile_head_text {
+    padding: 15px 40px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.profile_select_section {
+    padding: 25px 25px;
+}
+
+.profile_select_text {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.profile_radio_label {
+    font-size: 12px;
+    color: #4a4a4a;
+    padding: 5px 0;
+}
+.custom-control-label::before {
+    background: none;
+    border: 1px solid #767676;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    background: #f26657;
+    border: 1px solid #f26657;
+}
+.profile_radio_label {
+    padding-left: 15px;
+}
+
+.profile_form {
+    padding-top: 40px;
+    margin-bottom: 50px;
+}

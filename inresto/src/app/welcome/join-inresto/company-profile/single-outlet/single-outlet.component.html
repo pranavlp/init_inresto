@@ -1,0 +1,72 @@
+<div class="row">
+    <form class="col-md-12">
+        
+      <div class="row input_div">
+        <label class= "col-md-2 float-left form_label">Company Name</label>
+        <input type="text" class="col-md-7 float-left form-control form_text_box" placeholder= "Company Name (Optional)">
+      </div>
+
+      <div class="row input_div">
+        <label class= "col-md-2 float-left form_label">Outlet Name</label>
+        <input type="text" class="col-md-7 float-left form-control form_text_box" placeholder= "Outlet Name">
+      </div>
+
+      <div class="row input_div">
+        <label class= "col-md-2 float-left form_label">Email</label>
+        <input type="email" class="col-md-7 float-left form-control form_text_box" placeholder= "Email">
+      </div>
+
+      <div class="row input_div">
+        <label class= "col-md-2 float-left form_label">Password</label>
+        <input type="password" class="col-md-7 float-left form-control form_text_box" placeholder= "Password">
+      </div>
+
+      <div class= "row input_div address_div">
+          <label class= "col-md-2 float-left form_label">Address</label>
+
+          <div class="col-md-7 address" >
+            <input type="text" class= "col-md-12 form-control form_text_box address_text_box" placeholder= "Street Address">
+
+            <input type="text" class= "form-control form_text_box address_text_box sub_address_text_box" placeholder= "Area">
+            <input type="text" class= "form-control form_text_box address_text_box sub_address_text_box_right" placeholder= "Zone">
+
+            <select class= "form-control form_text_box address_text_box sub_address_text_box">
+              <option>Select City</option>
+            </select>
+
+            <input type="text" class= "form-control form_text_box address_text_box sub_address_text_box_right" placeholder= "Zip/Pincode"/>
+
+            <!-- <select class= "form-control form_text_box float-left address_text_box country_text_box">
+              <option>Select Country</option>
+            </select> -->
+
+            <!-- <mat-form-field>
+              <mat-select class= "form-control form_text_box float-left address_text_box country_text_box" placeholder= "Select Country">
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+                <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field> -->
+
+            
+
+            <!-- <mat-form-field>
+              <select matNativeControl required>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
+            </mat-form-field> -->
+            
+<!-- <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"/> -->
+
+
+            <button type="button" class="btn submit_button"> Submit </button>
+
+          </div>
+      </div>
+
+    </form>
+   
+</div>

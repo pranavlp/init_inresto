@@ -24,6 +24,28 @@ html, body {font-family : 'Montserrat',sans-serif !important;background : #f2f2f
 
 
 
+.left-navigation-text {
+    color: #d9d9d9;
+    font-size: 12px;
+}
+.left-navigation-text-active {
+    background: #f2f2f2;
+    color: #525252;
+    font-weight: 500;
+}
+
+.heading-20 {
+    color: #525252;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header-tab-active-text {
+    color: #525252;
+    font-size: 12px;
+    font-weight: 500;
+    border-bottom: 3px solid #ff5f5f;
+}
 
 // import other style files next to all styles
 // @import '~bootstrap/scss/bootstrap'

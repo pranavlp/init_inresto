@@ -5,13 +5,22 @@ import { RouterModule, Routes, Router, RouterStateSnapshot, ActivatedRoute } fro
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 
+export class PageType {
+  static LOGIN_PAGE = 0;
+  static JOIN_PAGE = 1;
+  static WELCOME_PAGE = 2;
+}
+
+
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
   static dataService: DataService;
-
+  pageType = PageType.JOIN_PAGE;
   menuIndex = 1;
   submenuIndex = 101;
   userLoggedIn = false;
@@ -36,6 +45,13 @@ export class DataService {
    }
    public getLeftMenuIndex(){
      return this.menuIndex;
+   }
+
+   public setPageType(pagetype){
+     this.pageType = pagetype;
+   }
+   public getPageType(){
+    return this.pageType;
    }
 
    public getResponseForUrl(getUrl) : Observable <HttpResponse<any>>{
