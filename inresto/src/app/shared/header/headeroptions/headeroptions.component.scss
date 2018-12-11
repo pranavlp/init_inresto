@@ -1,5 +1,6 @@
 .topborText
-    {width: 155px; height: 40px; border-radius: 5px; background: #fff; text-align: center; color: #5b5b5b; font-size: 11px; line-height: 14px; padding: 6px 0; margin-bottom: 0; margin-top: 3px; margin-right: 10px;}
+    {width: 170px; height: 50px; background: #fff; text-align: center; color: #5b5b5b; font-size: 11px; line-height: 14px; padding: 8px 0; padding-left: 15px; margin-bottom: 0; margin-right: 10px; position: relative;}
+.topborText span{font-weight: 600;}
+.topborText::before{position: absolute; content: ""; top: 10px; left: 10px; background:url('/assets/images/dollar.png') no-repeat; width: 25px; height: 25px;}
 
-.helpIcon, .notifiIcon
-    {padding: 11px; display: block;}
+.helpIcon, .notifiIcon{padding: 11px; display: block;}
