@@ -5,7 +5,8 @@ import { DineindashboardComponent } from './dineindashboard/dineindashboard.comp
 import { DineinreservwalkinComponent } from './dineinreservwalkin/dineinreservwalkin.component';
 import { AddreservationpopupComponent} from './addreservationpopup/addreservationpopup.component'
 import {AddwalkinpopupComponent} from './addwalkinpopup/addwalkinpopup.component'
-import {CheckavailabilitypopupComponent} from './checkavailabilitypopup/checkavailabilitypopup.component'
+import {CheckavailabilitypopupComponent} from './checkavailabilitypopup/checkavailabilitypopup.component';
+
 @NgModule({
   declarations: [DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent],
   imports: [

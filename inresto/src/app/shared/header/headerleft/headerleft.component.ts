@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
   templateUrl: './headerleft.component.html',
   styleUrls: ['./headerleft.component.scss']
 })
-export class HeaderleftComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class HeaderleftComponent implements OnInit, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   constructor() { }
 

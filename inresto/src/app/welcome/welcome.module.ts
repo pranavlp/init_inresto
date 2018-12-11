@@ -17,7 +17,6 @@ import { FormsModule } from '@angular/forms';
 import { MultipleOutletComponent } from './join-inresto/company-profile/multiple-outlet/multiple-outlet.component';
 import { MultipleCompaniesComponent } from './join-inresto/company-profile/multiple-companies/multiple-companies.component';
 
-
 @NgModule({
   declarations: [WelcomeComponent, JoinInrestoComponent, JoinLeftnavigationComponent, JoinHeadertabComponent, CompanyProfileComponent, SingleOutletComponent, MultipleOutletComponent, MultipleCompaniesComponent],
   imports: [
