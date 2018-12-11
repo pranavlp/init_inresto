@@ -23,12 +23,22 @@ export class DataService {
   pageType = PageType.JOIN_PAGE;
   menuIndex = 1;
   submenuIndex = 101;
+  userLoggedIn = false;
+  
   constructor(public http: HttpClient, public logger: LoggerService) {
 
     DataService.dataService = this;
    }
    static getDataService(){
      return DataService.dataService;
+   }
+
+   public getIsUserLoggedIn(){
+     return this.userLoggedIn;
+   }
+
+   public setIsUserLoggedIn(loggedIn){
+     this.userLoggedIn = loggedIn;
    }
    public setLeftMenuIndex(index){
      this.menuIndex = index;
