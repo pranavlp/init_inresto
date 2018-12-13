@@ -6,11 +6,11 @@ import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Account } from './models/account.model'
 
-export class PageType {
-  static LOGIN_PAGE = 0;
-  static JOIN_PAGE = 1;
-  static WELCOME_PAGE = 2;
-}
+// export class PageType {
+//   static LOGIN_PAGE = 0;
+//   static JOIN_PAGE = 1;
+//   static WELCOME_PAGE = 2;
+// }
 
 
 
@@ -22,7 +22,7 @@ export class DataService {
   uri = 'http://localhost:3001/web';
   static dataService: DataService;
   userAccount:Account;
-  pageType = PageType.LOGIN_PAGE;
+  // pageType = PageType.LOGIN_PAGE;
   menuIndex = 1;
   submenuIndex = 101;
   userLoggedIn = false;
@@ -36,6 +36,7 @@ export class DataService {
    }
 
    public getIsUserLoggedIn(){
+     console.log(this.userLoggedIn);
      return this.userLoggedIn;
    }
 
@@ -50,12 +51,12 @@ export class DataService {
      return this.menuIndex;
    }
 
-   public setPageType(pagetype){
-     this.pageType = pagetype;
-   }
-   public getPageType(){
-    return this.pageType;
-   }
+  //  public setPageType(pagetype){
+  //    this.pageType = pagetype;
+  //  }
+  //  public getPageType(){
+  //   return this.pageType;
+  //  }
 
    public getResponseForUrl(getUrl) : Observable <HttpResponse<any>>{
      return this.http.get<any>(

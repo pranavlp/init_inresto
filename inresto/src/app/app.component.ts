@@ -1,7 +1,7 @@
 import { Component, OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 import { RouterModule, Routes, Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
-import { DataService, PageType } from './data.service';
+import { DataService } from './data.service';
 import { LoggerService } from './logger.service';
 
 //our components
