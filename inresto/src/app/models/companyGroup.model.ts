@@ -1,10 +1,10 @@
 import { Company } from "./company.model";
 
-export interface Banner {
+export interface CompanyGroup {
     companyGroupName: String,
     groupEmail: String,
     groupPhone:String,
     groupLogoUrl:String,
     superAccount:Account,
-    company:[Company],//Company can have many Restaurants(outlets)
+    company:[String],//Company can have many Restaurants(outlets)
 }

@@ -20,5 +20,5 @@ export interface Account {
     status : { type: Number, default: 1}, //1-Active Account; 0-Inactive Account
     version : Number,
     appLoginDate : Date,
-	accountType : {type : Number,default : 0} , // 0 - default restaurant account; 1 - centralized menu admin account; 2-CRM master login
+	accountType : {type : Number,default : 0} , // 0 - default restaurant account; 1 - centralized menu admin account; 2-CRM master login; 3-SuperAdmin(Company Owner)
 }
