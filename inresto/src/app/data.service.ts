@@ -4,6 +4,7 @@ import { LoggerService } from './logger.service';
 import { RouterModule, Routes, Router, RouterStateSnapshot, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
+import { Account } from './models/account.model'
 
 export class PageType {
   static LOGIN_PAGE = 0;
@@ -18,9 +19,10 @@ export class PageType {
   providedIn: 'root'
 })
 export class DataService {
-
+  uri = 'http://localhost:3001/web';
   static dataService: DataService;
-  pageType = PageType.JOIN_PAGE;
+  userAccount:Account;
+  pageType = PageType.LOGIN_PAGE;
   menuIndex = 1;
   submenuIndex = 101;
   userLoggedIn = false;
@@ -37,8 +39,9 @@ export class DataService {
      return this.userLoggedIn;
    }
 
-   public setIsUserLoggedIn(loggedIn){
-     this.userLoggedIn = loggedIn;
+   public setIsUserLoggedIn(loggedIn, userObj){
+    this.userLoggedIn = loggedIn;
+    this.userAccount = userObj;
    }
    public setLeftMenuIndex(index){
      this.menuIndex = index;
@@ -65,6 +68,12 @@ export class DataService {
   }
   public getLeftSubMenuIndex(){
     return this.submenuIndex;
+  }
+  postLogin(username,password) {
+    return this.http.post(`${this.uri}/login`,{username,password});
+  }
+  getBanners(){
+    return this.http.get(`${this.uri}/banners`);
   }
    
 }

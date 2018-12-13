@@ -1,30 +1,15 @@
 
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <img src="assets/images/loginslider1.jpg" alt="first slide"> 
+<ngb-carousel *ngIf="banners">
+  <ng-template ngbSlide *ngFor = "let banner of banners; let i = index">
+    <img [src]="banner.bannerUrl" alt="first slide">
+    <!-- <img src="assets/images/loginslider1.jpg" alt="first slide">  -->
     <div class="carousel-caption">
       <img src="assets/images/artboard1.png" alt="">
       <img src="assets/images/artboard2.png" alt="">
       <div class="clearfix"></div>
-        <h3>Quis autem vel eum iure reprehenderit <br/>qui in ea voluptate velit esse quam.</h3>
-        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-            nisi ut aliquid ex ea commodi consequatur?</p>
+      <h3>{{banner.bannerName}}</h3>
+      <p>{{banner.bannerDescription}}</p>
         <a href="#" class="btn loginbtn">Learn How it Works</a>
       </div> 
   </ng-template>
-  <ng-template ngbSlide>
-      <img src="assets/images/loginslider1.jpg" alt="first slide"> 
-      <div class="carousel-caption">
-        <img src="assets/images/artboard1.png" alt="">
-        <img src="assets/images/artboard2.png" alt="">
-        <div class="clearfix"></div>
-          <h3>Quis autem vel eum iure reprehenderit <br/>qui in ea voluptate velit esse quam.</h3>
-          <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-              nisi ut aliquid ex ea commodi consequatur?</p>
-          <a href="#" class="btn loginbtn">Learn How it Works</a>
-        </div> 
-    </ng-template>
-
-  
-  
 </ngb-carousel>

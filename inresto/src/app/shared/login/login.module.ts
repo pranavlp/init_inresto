@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 import { CarouselConfigComponent } from './carousel-config/carousel-config.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LoginleftComponent } from './loginleft/loginleft.component';
@@ -9,7 +10,8 @@ import { LoginleftComponent } from './loginleft/loginleft.component';
   declarations: [LoginComponent, CarouselConfigComponent, LoginleftComponent],
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   exports :[
     LoginComponent
