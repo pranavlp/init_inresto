@@ -5,6 +5,7 @@ import { RouterModule, Routes, Router, RouterStateSnapshot, ActivatedRoute } fro
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Account } from './models/account.model'
+import { CompanyGroup } from './models/companyGroup.model'
 
 // export class PageType {
 //   static LOGIN_PAGE = 0;
@@ -22,6 +23,9 @@ export class DataService {
   uri = 'http://localhost:3001/web';
   static dataService: DataService;
   userAccount:Account;
+  superAdmin:false;
+  companyGroup:CompanyGroup;
+  companyCount:0;
   // pageType = PageType.LOGIN_PAGE;
   menuIndex = 1;
   submenuIndex = 101;
@@ -76,5 +80,11 @@ export class DataService {
   getBanners(){
     return this.http.get(`${this.uri}/banners`);
   }
-   
+  public setUserInfo(loggedIn, userObj, companyGrp,companyCnt, superAdmin){
+    this.userLoggedIn = loggedIn;
+    this.userAccount = userObj;
+    this.companyGroup = companyGrp;
+    this.companyCount = companyCnt;
+    this.superAdmin = superAdmin;
+   }
 }
