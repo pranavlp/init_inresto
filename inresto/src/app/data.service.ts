@@ -20,7 +20,7 @@ import { CompanyGroup } from './models/companyGroup.model'
   providedIn: 'root'
 })
 export class DataService {
-  uri = 'http://localhost:3001/web';
+  uri = 'http://localhost:3001/api';
   static dataService: DataService;
   userAccount:Account;
   superAdmin:false;
