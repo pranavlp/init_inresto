@@ -11,18 +11,13 @@ html, body {font-family : 'Montserrat',sans-serif !important;background : #f2f2f
 .capMain .modal-header .close{margin-top: -2.5rem}
 .popupwindow .card{border: none;}
 
+.cmnBtn{margin: 0px 6px;border-radius: 5px;padding: 9px 20px;font-size: 12px;border: #f2f2f2; cursor: pointer;}
+.cmnBtn:hover{background: #f76858;border: #f76858;color: #fff;}
+.cmnBtn:focus, .close:focus { outline:none }
+
 @media (min-width: 1366px){
     .popupwindow .modal-dialog{max-width: 1024px !important;}
     }
-
-
-
-
-
-
-
-
-
 
 .left-navigation-text {
     color: #d9d9d9;
@@ -47,6 +42,35 @@ html, body {font-family : 'Montserrat',sans-serif !important;background : #f2f2f
     border-bottom: 3px solid #ff5f5f;
 }
 
+.save-button {
+    font-size: 12px;
+    color: white;
+    padding: 7px 10px;
+    text-align: center; 
+    background: #f26657;
+    border-radius: 5px;
+    border: 1px solid #f26657;
+}
+.save-button:hover {
+    background: #d8d8d8;
+    border: 1px solid #d8d8d8;
+    cursor: pointer;
+}
+
+.cancel-button {
+    font-size: 12px;
+    padding: 7px 10px;
+    text-align: center; 
+    background: #fff;
+    border: 1px solid #f26657;
+    color: #f26657;
+    border-radius: 5px;
+}
+.cancel-button:hover {
+    border: 1px solid #d8d8d8;
+    color: #d8d8d8;
+    cursor: pointer;
+}
 // import other style files next to all styles
 // @import '~bootstrap/scss/bootstrap'
 

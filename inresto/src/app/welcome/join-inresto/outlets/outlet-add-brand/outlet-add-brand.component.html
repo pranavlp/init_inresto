@@ -1,0 +1,28 @@
+<button class="add_button float-right" (click)="openVerticallyCentered(content)"><span><img class= "plus_icon" src= "assets/images/plus.png"></span>Add Brand</button>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add New Brand</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class= "col-md-12 new_brand_text">Please enter a New Brand name:</div>
+
+  <div class="col-md-12 input_div">
+    <input type="text" class="form-control form_text_box" placeholder= "Enter New Brand">
+  </div>
+
+  <div class= "col-md-12">
+    <div class= "add_logo_div">
+        <div class= "add_logo_text">Add Logo</div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+      <div class= "add_brand_button save-button">Add Brand</div>
+      <div class= "cancel_brand_button cancel-button" (click)="d('Cross click')">Cancel</div>
+  </div>
+
+</ng-template>

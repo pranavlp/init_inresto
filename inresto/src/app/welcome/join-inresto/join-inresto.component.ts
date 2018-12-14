@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinInrestoComponent implements OnInit {
 
+  outlets_available = false;
   constructor() { }
 
   ngOnInit() {

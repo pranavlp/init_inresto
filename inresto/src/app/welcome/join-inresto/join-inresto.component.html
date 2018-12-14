@@ -23,7 +23,11 @@
     <div class="col-md-9">
         <app-join-headertab></app-join-headertab>
 
-        <app-company-profile></app-company-profile>
+        <app-company-profile *ngIf = "outlets_available; else show_outlets"></app-company-profile>
+
+        <ng-template #show_outlets>
+          <app-outlets></app-outlets>
+        </ng-template>
     </div>
 
   </div>
