@@ -4,12 +4,14 @@ import { LoggerService } from './logger.service';
 import { RouterModule, Routes, Router, RouterStateSnapshot, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
+import { Account } from './models/account.model'
+import { CompanyGroup } from './models/companyGroup.model'
 
-export class PageType {
-  static LOGIN_PAGE = 0;
-  static JOIN_PAGE = 1;
-  static WELCOME_PAGE = 2;
-}
+// export class PageType {
+//   static LOGIN_PAGE = 0;
+//   static JOIN_PAGE = 1;
+//   static WELCOME_PAGE = 2;
+// }
 
 
 
@@ -18,9 +20,13 @@ export class PageType {
   providedIn: 'root'
 })
 export class DataService {
-
+  uri = 'http://localhost:3001/web';
   static dataService: DataService;
-  pageType = PageType.JOIN_PAGE;
+  userAccount:Account;
+  superAdmin:false;
+  companyGroup:CompanyGroup;
+  companyCount:0;
+  // pageType = PageType.LOGIN_PAGE;
   menuIndex = 1;
   submenuIndex = 101;
   userLoggedIn = false;
@@ -34,11 +40,13 @@ export class DataService {
    }
 
    public getIsUserLoggedIn(){
+     console.log(this.userLoggedIn);
      return this.userLoggedIn;
    }
 
-   public setIsUserLoggedIn(loggedIn){
-     this.userLoggedIn = loggedIn;
+   public setIsUserLoggedIn(loggedIn, userObj){
+    this.userLoggedIn = loggedIn;
+    this.userAccount = userObj;
    }
    public setLeftMenuIndex(index){
      this.menuIndex = index;
@@ -47,12 +55,12 @@ export class DataService {
      return this.menuIndex;
    }
 
-   public setPageType(pagetype){
-     this.pageType = pagetype;
-   }
-   public getPageType(){
-    return this.pageType;
-   }
+  //  public setPageType(pagetype){
+  //    this.pageType = pagetype;
+  //  }
+  //  public getPageType(){
+  //   return this.pageType;
+  //  }
 
    public getResponseForUrl(getUrl) : Observable <HttpResponse<any>>{
      return this.http.get<any>(
@@ -66,5 +74,17 @@ export class DataService {
   public getLeftSubMenuIndex(){
     return this.submenuIndex;
   }
-   
+  postLogin(username,password) {
+    return this.http.post(`${this.uri}/login`,{username,password});
+  }
+  getBanners(){
+    return this.http.get(`${this.uri}/banners`);
+  }
+  public setUserInfo(loggedIn, userObj, companyGrp,companyCnt, superAdmin){
+    this.userLoggedIn = loggedIn;
+    this.userAccount = userObj;
+    this.companyGroup = companyGrp;
+    this.companyCount = companyCnt;
+    this.superAdmin = superAdmin;
+   }
 }
