@@ -16,9 +16,14 @@ import { SingleOutletComponent } from './join-inresto/company-profile/single-out
 import { FormsModule } from '@angular/forms';
 import { MultipleOutletComponent } from './join-inresto/company-profile/multiple-outlet/multiple-outlet.component';
 import { MultipleCompaniesComponent } from './join-inresto/company-profile/multiple-companies/multiple-companies.component';
+import { OutletsComponent } from './join-inresto/outlets/outlets.component';
+import { OutletSingleOutletComponent } from './join-inresto/outlets/outlet-single-outlet/outlet-single-outlet.component';
+import { OutletAddOutletComponent } from './join-inresto/outlets/outlet-add-outlet/outlet-add-outlet.component';
+import { OutletAddBrandComponent } from './join-inresto/outlets/outlet-add-brand/outlet-add-brand.component';
+import { OutletAddCompanyComponent } from './join-inresto/outlets/outlet-add-company/outlet-add-company.component';
 
 @NgModule({
-  declarations: [WelcomeComponent, JoinInrestoComponent, JoinLeftnavigationComponent, JoinHeadertabComponent, CompanyProfileComponent, SingleOutletComponent, MultipleOutletComponent, MultipleCompaniesComponent],
+  declarations: [WelcomeComponent, JoinInrestoComponent, JoinLeftnavigationComponent, JoinHeadertabComponent, CompanyProfileComponent, SingleOutletComponent, MultipleOutletComponent, MultipleCompaniesComponent, OutletsComponent, OutletSingleOutletComponent, OutletAddOutletComponent, OutletAddBrandComponent, OutletAddCompanyComponent],
   imports: [
     CommonModule,
     SharedModule,

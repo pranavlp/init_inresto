@@ -1,0 +1,82 @@
+<button class="add_button float-right" (click)="openVerticallyCentered(content)"><span><img class= "plus_icon" src= "assets/images/plus.png"></span>Add Outlet</button>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add New Outlet</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="input_div">
+    <label class= "col-md-3 float-left form_label">Outlet Name</label>
+    <input type="text" class="col-md-7 float-left form-control form_text_box" placeholder= "Outlet Name">
+  </div>
+
+  <div class="input_div">
+    <label class= "col-md-3 float-left form_label" for="typeahead-focus">Brand</label>
+    <!-- <input type="text" class="col-md-7 float-left form-control form_text_box" placeholder= "Add Brand (Optional)"> -->
+    <input id="typeahead-focus"
+    type="text"
+    class="col-md-7 float-left form-control form_text_box"
+    [(ngModel)]="model"
+    [ngbTypeahead]="search"
+    (focus)="focus$.next($event.target.value)"
+    (click)="click$.next($event.target.value)"
+    #instance="ngbTypeahead"
+    name= "multiple_outlet" 
+    placeholder= "Select Brand"/>
+  </div>
+
+  <div class="input_div">
+    <label class= "col-md-3 float-left form_label">Email</label>
+    <input type="email" class="col-md-7 float-left form-control form_text_box" placeholder= "Email">
+  </div>
+
+  <div class="input_div">
+    <label class= "col-md-3 float-left form_label">Password</label>
+    <input type="password" class="col-md-7 float-left form-control form_text_box" placeholder= "Password">
+  </div>
+
+  <div class= "input_div address_div">
+          <label class= "col-md-3 float-left form_label">Address</label>
+
+          <div class="col-md-7 address float-left">
+            <input type="text" class= "col-md-12 form-control form_text_box address_text_box" placeholder= "Street Address">
+
+            <input type="text" class= "form-control form_text_box address_text_box sub_address_text_box" placeholder= "Area">
+            <input type="text" class= "form-control form_text_box address_text_box sub_address_text_box_right" placeholder= "Zone">
+
+            <select class= "form-control form_text_box address_text_box sub_address_text_box">
+              <option>Select City</option>
+            </select>
+
+            <input type="text" class= "form-control form_text_box address_text_box sub_address_text_box_right" placeholder= "Zip/Pincode"/>
+
+            <select class= "form-control form_text_box float-left address_text_box country_text_box">
+              <option>Select Country</option>
+            </select>
+
+            <button type="button" class="btn submit_button save-button"> Add Outlet </button>
+
+          </div>
+      </div>
+
+  
+  <!-- <div class="modal-body">
+    <p>Hello, World!</p>
+  </div> -->
+
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+  </div> -->
+
+  <!-- <div class= "col-md-11 add_header float-left">Add New Outlet</div>
+
+  <button type="button" class="close float-left" aria-label="Close" (click)="d('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button> -->
+
+
+</ng-template>
+
