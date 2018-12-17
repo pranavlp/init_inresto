@@ -16,7 +16,7 @@ export class AvailabilerestaurentsComponent implements OnInit {
     dots: false,
     nav: true,
     navSpeed: 1000,
-    navText: ['Prev', 'Next'],
+    navText: ['', ''],
     autoWidth:true,
     responsive: {
       0: {

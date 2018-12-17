@@ -9,15 +9,16 @@ import {CheckavailabilitypopupComponent} from './checkavailabilitypopup/checkava
 import { DineinfiltersComponent } from './dineinfilters/dineinfilters.component';
 import { AvailabilerestaurentsComponent } from './checkavailabilitypopup/availabilerestaurents/availabilerestaurents.component';
 import { OwlModule } from 'ngx-owl-carousel';
+import { ReservetableComponent } from './reservetable/reservetable.component';
 
 @NgModule({
-  declarations: [DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent, DineinfiltersComponent, AvailabilerestaurentsComponent],
+  declarations: [DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent, DineinfiltersComponent, AvailabilerestaurentsComponent, ReservetableComponent],
   imports: [
     CommonModule,
     CommonviewsModule,
     OwlModule
   ],exports:[
-    DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent, DineinfiltersComponent, AvailabilerestaurentsComponent
+    DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent, DineinfiltersComponent, AvailabilerestaurentsComponent, ReservetableComponent
   ]
 })
 export class DineinModule { }
