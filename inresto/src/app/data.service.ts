@@ -87,4 +87,8 @@ export class DataService {
     this.companyCount = companyCnt;
     this.superAdmin = superAdmin;
    }
+   public getUserAdminStatus(){
+    //console.log("Super Admin Status: "+this.superAdmin);
+    return this.superAdmin;
+   }
 }

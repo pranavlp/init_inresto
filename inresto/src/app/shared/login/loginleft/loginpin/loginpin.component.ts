@@ -16,12 +16,14 @@ export class LoginpinComponent implements OnInit {
   ngOnInit() {
   }
 
-  moveNext (event, element) {
+  moveNext (event, elementN,elementB) {
     if(event.keyCode == ''){
-
+      //console.log("Focus not changing");
     }
-    else{
-      element.focus();
+    else if(event.keyCode == 8){
+      elementB.focus();
+    } else{
+      elementN.focus();
     }
   }
 

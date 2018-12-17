@@ -1,9 +1,15 @@
 <div class="loginLeft">
   <img src="assets/images/loginlogo.png" alt="Inresto">
   <div class="clearfix mb45"></div>
-  <app-loginemilpassword></app-loginemilpassword>
-  <!-- <app-loginpin></app-loginpin> -->
-
+  <div *ngIf="this.dataService.getIsUserLoggedIn()== false">
+    <app-loginemilpassword></app-loginemilpassword>
+  </div>
+  <div *ngIf="this.dataService.getUserAdminStatus()== true">
+    <app-loginemilpassword></app-loginemilpassword>
+  </div>
+  <div *ngIf="this.dataService.getUserAdminStatus()== false && this.dataService.getIsUserLoggedIn()== true">
+    <app-loginpin></app-loginpin>
+  </div>
   <p class="copyright">© 2019 Powered by <span>inResto</span></p>
 </div>
 
