@@ -11,8 +11,9 @@ import { DineinfiltersComponent } from './dineinfilters/dineinfilters.component'
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { FormsModule } from '@angular/forms';
 import { OwlModule} from 'ngx-owl-carousel';
-import { AvailabilerestaurentsComponent } from './checkavailabilitypopup/availabilerestaurents/availabilerestaurents.component'
-
+import { AvailabilerestaurentsComponent } from './checkavailabilitypopup/availabilerestaurents/availabilerestaurents.component';
+import {ReservetableComponent} from './reservetable/reservetable.component';
+ 
 @NgModule({
   declarations: [DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent, DineinfiltersComponent, AvailabilerestaurentsComponent, ReservetableComponent],
   imports: [
