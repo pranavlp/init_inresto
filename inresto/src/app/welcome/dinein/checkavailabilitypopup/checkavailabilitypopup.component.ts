@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AvailabilerestaurentsComponent } from './availabilerestaurents/availabilerestaurents.component';
 
 @Component({
 	selector: 'app-checkavailabilitypopup',
