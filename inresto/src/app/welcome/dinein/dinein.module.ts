@@ -1,21 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {CommonviewsModule} from '../../commonviews/commonviews.module'
+import {CommonviewsModule} from '../../commonviews/commonviews.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DineindashboardComponent } from './dineindashboard/dineindashboard.component';
 import { DineinreservwalkinComponent } from './dineinreservwalkin/dineinreservwalkin.component';
 import { AddreservationpopupComponent} from './addreservationpopup/addreservationpopup.component'
 import {AddwalkinpopupComponent} from './addwalkinpopup/addwalkinpopup.component'
 import {CheckavailabilitypopupComponent} from './checkavailabilitypopup/checkavailabilitypopup.component';
 import { DineinfiltersComponent } from './dineinfilters/dineinfilters.component';
-import { AvailabilerestaurentsComponent } from './checkavailabilitypopup/availabilerestaurents/availabilerestaurents.component';
-import { OwlModule } from 'ngx-owl-carousel';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { FormsModule } from '@angular/forms';
+import { OwlModule} from 'ngx-owl-carousel';
+import { AvailabilerestaurentsComponent } from './checkavailabilitypopup/availabilerestaurents/availabilerestaurents.component'
 
 @NgModule({
   declarations: [DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent, DineinfiltersComponent, AvailabilerestaurentsComponent],
   imports: [
     CommonModule,
     CommonviewsModule,
-    OwlModule
+    ReactiveFormsModule,
+    FormsModule,
+    OwlModule,
+    BsDatepickerModule.forRoot()
   ],exports:[
     DineindashboardComponent, DineinreservwalkinComponent, AddreservationpopupComponent, AddwalkinpopupComponent, CheckavailabilitypopupComponent, DineinfiltersComponent, AvailabilerestaurentsComponent
   ]
