@@ -10,7 +10,7 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
   providers: [NgbModalConfig, NgbModal]
 })
 export class AddreservationpopupComponent implements OnInit {
-
+ 
   datePickerConfig: Partial<BsDatepickerConfig>;
   addReservation: FormGroup;
   preferenceFormArray: Array<any> = [];
