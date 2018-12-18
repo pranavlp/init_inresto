@@ -2,15 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormBuilder, AbstractControl, Validators } from '@angular/forms';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import {NgbTimepickerConfig} from '@ng-bootstrap/ng-bootstrap';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 @Component({
   selector: 'app-addreservationpopup',
   templateUrl: './addreservationpopup.component.html',
   styleUrls: ['./addreservationpopup.component.scss'],
-  providers: [NgbModalConfig, NgbModal]
+  providers: [NgbModalConfig, NgbModal, NgbTimepickerConfig, CollapseModule]
 })
 export class AddreservationpopupComponent implements OnInit {
- 
+  spinners = false;
+  meridian = true;
   datePickerConfig: Partial<BsDatepickerConfig>;
   addReservation: FormGroup;
   preferenceFormArray: Array<any> = [];
@@ -105,6 +108,7 @@ export class AddreservationpopupComponent implements OnInit {
     // customize default values of modals used by this component tree
     config.backdrop = 'static';
     config.keyboard = false;
+    
   }
 
   openLg(content) {

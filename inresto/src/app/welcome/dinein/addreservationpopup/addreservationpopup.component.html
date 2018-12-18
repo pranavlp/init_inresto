@@ -56,7 +56,8 @@
                                         <div class="form-check-inline" *ngFor="let guest of guestType">
                                             <input class="form-check-input" (change)="onGuestTypeChange(guest.name, $event.target.checked)" 
                                                         name="{{ guest.name }}" type="checkbox" id="{{guest.name}}">
-                                            <label class="form-check-label" for="{{guest.name}}" >
+                                            <span class="checkmark"></span>
+                                            <label class="form-check-label guestType" for="{{guest.name}}" >
                                                 {{guest.name}}
                                             </label>
                                         </div>    
@@ -202,14 +203,23 @@
                                     </div>
                                     <div class="col-md-3 justify-content-end">
                                         <label for="selectReservationTime"><b>Select Time</b></label>
-                                        <input type="time" formControlName="selectReservationTime" class="form-control">
-                                        <!-- <timepicker formControlName="selectReservationTime"></timepicker> -->
+                                        <!-- <input type="time" formControlName="selectReservationTime" class="form-control"> -->
+                                        <ngb-timepicker formControlName="selectReservationTime"  [meridian]="meridian" [spinners]="spinners"></ngb-timepicker>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group d-flex justify-content-start">
-                                <button type="submit" class="btn btn-primary mr-2">Check Availability</button>
+                                <button type="submit" class="btn btn-primary mr-2" (click)="isCollapsed = !isCollapsed"
+                                [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Check Availability</button>
                                 <button class="btn btn-default mr-2">Regret SMS</button>
+                            </div>
+                            <div id="collapseExample" [ngbCollapse]="!isCollapsed">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <app-checkavailabilitytables></app-checkavailabilitytables>
+			                        <app-availabilerestaurents></app-availabilerestaurents>
+                                  </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-8">
@@ -256,7 +266,8 @@
                                 <div class="form-check-inline" *ngFor="let prefer of preferences">
                                     <input class="form-check-input" (change)="onPreferenceChange(prefer.name, $event.target.checked)" 
                                         name="{{ prefer.name }}" type="checkbox" id="{{prefer.name}}">
-                                    <label class="form-check-label" for="{{prefer.name}}" >
+                                        <span class="checkmark"></span>
+                                    <label class="form-check-label preferName" for="{{prefer.name}}" >
                                         {{prefer.name}}
                                     </label>
                                 </div>
