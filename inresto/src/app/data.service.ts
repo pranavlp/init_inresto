@@ -4,8 +4,8 @@ import { LoggerService } from './logger.service';
 import { RouterModule, Routes, Router, RouterStateSnapshot, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
-import { Account } from './models/account.model'
-import { CompanyGroup } from './models/companyGroup.model'
+import { Account } from './models/account.model';
+import { CompanyGroup } from './models/companyGroup.model';
 
 // export class PageType {
 //   static LOGIN_PAGE = 0;
@@ -31,7 +31,7 @@ export class DataService {
   submenuIndex = 101;
   userLoggedIn = false;
   
-  constructor(public http: HttpClient, public logger: LoggerService) {
+  constructor(public http: HttpClient, public logger: LoggerService, private router: Router) {
 
     DataService.dataService = this;
    }
@@ -74,21 +74,26 @@ export class DataService {
   public getLeftSubMenuIndex(){
     return this.submenuIndex;
   }
-  postLogin(username,password) {
-    return this.http.post(`${this.uri}/login`,{username,password});
-  }
-  getBanners(){
-    return this.http.get(`${this.uri}/banners`);
-  }
   public setUserInfo(loggedIn, userObj, companyGrp,companyCnt, superAdmin){
     this.userLoggedIn = loggedIn;
     this.userAccount = userObj;
     this.companyGroup = companyGrp;
     this.companyCount = companyCnt;
     this.superAdmin = superAdmin;
-   }
-   public getUserAdminStatus(){
-    //console.log("Super Admin Status: "+this.superAdmin);
+  }
+  public getUserAdminStatus(){
     return this.superAdmin;
-   }
+  }
+  //Login SCreen
+  postLogin(username,password) {
+  return this.http.post(`${this.uri}/login`,{username,password});
+  }
+  getBanners(){
+    return this.http.get(`${this.uri}/banners`);
+  }
+  getLogout(){
+    this.router.navigate(['/login']);
+    return this.http.get(`${this.uri}/logout`);
+  }
+
 }

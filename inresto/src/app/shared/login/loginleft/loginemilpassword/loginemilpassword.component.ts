@@ -25,7 +25,7 @@ export class LoginemilpasswordComponent implements OnInit {
           console.log("Data account exists.");
           if(data['data'].account.superAdmin == true && data['data'].companyCount == 0){
             console.log("1");
-            this.router.navigate(['/accountSettings/company']);
+            this.router.navigate(['/account-settings/company']);
           } else if(data['data'].account.superAdmin == true && data['data'].companyCount > 0){
             console.log("2");
             this.router.navigate(['/welcome']);

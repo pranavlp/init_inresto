@@ -21,6 +21,7 @@ import { OutletSingleOutletComponent } from './join-inresto/outlets/outlet-singl
 import { OutletAddOutletComponent } from './join-inresto/outlets/outlet-add-outlet/outlet-add-outlet.component';
 import { OutletAddBrandComponent } from './join-inresto/outlets/outlet-add-brand/outlet-add-brand.component';
 import { OutletAddCompanyComponent } from './join-inresto/outlets/outlet-add-company/outlet-add-company.component';
+import { RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [WelcomeComponent, JoinInrestoComponent, JoinLeftnavigationComponent, JoinHeadertabComponent, CompanyProfileComponent, SingleOutletComponent, MultipleOutletComponent, MultipleCompaniesComponent, OutletsComponent, OutletSingleOutletComponent, OutletAddOutletComponent, OutletAddBrandComponent, OutletAddCompanyComponent],
@@ -30,6 +31,7 @@ import { OutletAddCompanyComponent } from './join-inresto/outlets/outlet-add-com
     CommonviewsModule,
     DetailsModule,
     FormsModule,
+    RouterModule
   ],exports:[
     WelcomeComponent,
     JoinInrestoComponent

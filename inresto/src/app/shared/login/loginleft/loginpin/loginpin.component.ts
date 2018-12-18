@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService} from '../../../../data.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-loginpin',
@@ -11,7 +13,7 @@ export class LoginpinComponent implements OnInit {
   pin3:number;
   pin4:number;
 
-  constructor() { }
+  constructor(private dataService:DataService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -25,6 +27,12 @@ export class LoginpinComponent implements OnInit {
     } else{
       elementN.focus();
     }
+  }
+  logout(){
+    this.dataService.getLogout().subscribe((data) => {
+      console.log(data);
+    });
+    return false;
   }
 
 }
