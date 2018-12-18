@@ -56,7 +56,8 @@
                                         <div class="form-check-inline" *ngFor="let guest of guestType">
                                             <input class="form-check-input" (change)="onGuestTypeChange(guest.name, $event.target.checked)" 
                                                         name="{{ guest.name }}" type="checkbox" id="{{guest.name}}">
-                                            <label class="form-check-label" for="{{guest.name}}" >
+                                            <span class="checkmark"></span>
+                                            <label class="form-check-label guestType" for="{{guest.name}}" >
                                                 {{guest.name}}
                                             </label>
                                         </div>    
@@ -265,7 +266,8 @@
                                 <div class="form-check-inline" *ngFor="let prefer of preferences">
                                     <input class="form-check-input" (change)="onPreferenceChange(prefer.name, $event.target.checked)" 
                                         name="{{ prefer.name }}" type="checkbox" id="{{prefer.name}}">
-                                    <label class="form-check-label" for="{{prefer.name}}" >
+                                        <span class="checkmark"></span>
+                                    <label class="form-check-label preferName" for="{{prefer.name}}" >
                                         {{prefer.name}}
                                     </label>
                                 </div>
